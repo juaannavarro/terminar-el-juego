@@ -12,6 +12,17 @@ def elegirOpcion():
             
     return num
 
+def ayuda(nivel):
+    if nivel==1:
+        print("0-100")
+    elif nivel==2:
+        print("0-1000")
+    elif nivel==3:
+        print("0-1000000")
+    elif nivel==4:
+        print("0-1000000000")
+    
+
 
 salir=False
 opcion=0
@@ -30,14 +41,22 @@ while not salir:
 
     print("Opcion elegida ", opcion)
 
+    aceptar_ayuda=input("¿quiere ayuda?s/n: ")
+    if (aceptar_ayuda=="s" or aceptar_ayuda=="S") and opcion>=1 and opcion<=4:
+        ayuda(opcion)
+    
+
+
+
+
     if opcion==1:
-        print("primera funcion")
+        print("nivel simple")
     elif opcion==2:
-        print("segunda funcion")
+        print("nivel intermedio")
     elif opcion==3:
-        print("tercera funcion")
+        print("nivel avanzado")
     elif opcion==4:
-        print("cuarta funcion")
+        print("nivel experto")
     elif opcion==5:
         salir=True
         print("fin del programa")
