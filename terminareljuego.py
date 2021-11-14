@@ -1,6 +1,7 @@
-def adivina_numero(num_max):
+def adivina_numero(num_max, intentos_maximos):
     import random 
     numero=random.randint(0,num_max)
+    
 
     numero_intento=0
     
@@ -19,6 +20,10 @@ def adivina_numero(num_max):
             encontrado = True
 
         numero_intento=numero_intento+1
+        if numero_intento>=intentos_maximos:
+            print("Has alcanzado el numero maximo de intentos")
+            encontrado=True
+
     print("numero de intentos", numero_intento)
 
 
@@ -72,17 +77,17 @@ while not salir:
     
     
     if opcion==1:
-        print("nivel simple")
-        adivina_numero(100)
+        print("nivel simple,maximo 10 intentos")
+        adivina_numero(100,10)
     elif opcion==2:
-        print("nivel intermedio")
-        adivina_numero(1000)
+        print("nivel intermedio,maximo 30 intentos")
+        adivina_numero(1000,30)
     elif opcion==3:
-        print("nivel avanzado")
-        adivina_numero(1000000)
+        print("nivel avanzado,maximo 50 intentos")
+        adivina_numero(1000000,50)
     elif opcion==4:
-        print("nivel experto")
-        adivina_numero(1000000000)
+        print("nivel experto,maximo 100 intentos")
+        adivina_numero(1000000000,100)
     elif opcion==5:
         salir=True
         print("fin del programa")
