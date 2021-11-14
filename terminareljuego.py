@@ -1,0 +1,5 @@
+print("Menu")
+print("1-Nivel simple")
+print("2-Nivel intermedio")
+print("3-Nivel avanzado")
+print("4-Nivel experto")
